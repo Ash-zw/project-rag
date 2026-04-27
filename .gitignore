@@ -1,0 +1,37 @@
+# Python 编译缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 虚拟环境
+.venv/
+venv/
+ENV/
+env/
+
+# IDE 配置文件
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 向量数据库（Chroma）
+chroma_db/
+chroma/
+
+# 聊天历史文件
+chat_history/
+history/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
+logs/
+
+# 临时数据
+*.tmp
+temp/
