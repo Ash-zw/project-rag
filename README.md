@@ -39,3 +39,32 @@ RAG/
 ├── app_file_uploader.py      # 文件上传扩展功能
 └── .gitignore                # Git 忽略配置
 
+## ✅ 环境准备
+
+### 1) 安装依赖
+```bash
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+- 终端运行，建议虚拟环境加载，清华镜像源加速
+---
+
+## ⚙️ 配置说明
+
+- config_data.py 中包含核心配置，根据实际需要，手动修改模型配置、chunk大小...
+- 默认嵌入器 text-embedding-v4 及 Qwen3-max
+- 注意，DashScope/通义千问相关的 API Key（例如 DASHSCOPE_API_KEY）需要在环境变量中先行配置
+---
+
+## 🚀 快速运行
+### 1) 启动知识库上传服务
+```bash
+streamlit run app_file_uplodader.py
+```
+- 打开页面后上传 .txt 文件后，即可写入本地向量库。
+
+### 2) 启动智能客服（RAG Chat）
+```bash
+streamlit run app.qa.py
+```
+- 输入问题后，会先检索知识库，再结合检索内容由模型综合回答
+---
